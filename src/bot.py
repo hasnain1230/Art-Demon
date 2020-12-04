@@ -3,7 +3,7 @@ import sys
 
 import discord
 import random
-from src.Drive import Drive
+from utilities import config
 from utilities.file_data_reader import file_open_read
 from discord.ext import commands
 from discord.ext.commands import CommandNotFound, MissingPermissions, ExpectedClosingQuoteError
@@ -214,5 +214,5 @@ async def exit(ctx):
     sys.exit('Going offline.')
 
 
-TOKEN = 'NzQwNjY2MTc3NTU0MjE5MDY3.XysVIQ.73-WOLO1FtDCNuDKmRdCDSVxdlg'
+TOKEN = config.DISCORD_SECRET_TOKEN
 bot.run(TOKEN)

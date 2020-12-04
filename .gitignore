@@ -133,7 +133,12 @@ Discarded/
 
 # Tests
 tests.py
+src/Testing.py
 
 # IDE, Finder, Random Files
 .DS_Store
 .idea/
+
+# Refreshed keys after pushing out keys publicly in initial commit. All keys have since been disabled and will no longer work.
+utilities/config.py
+utilities/credentials.json
