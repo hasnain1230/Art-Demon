@@ -1,0 +1,92 @@
+a female human
+a male human
+a nonbinary human
+a transgender male human
+a transgender female human
+a female elf
+a male elf
+a nonbinary elf
+a transgender male elf
+a transgender female elf
+a female demon
+a male demon
+a nonbinary demon
+a transgender male demon
+a transgender female demon
+a succubus
+an incubus
+a female angel
+a male angel
+a nonbinary angel
+a transgender male angel
+a transgender female angel
+a female orc
+a male orc
+a nonbinary orc
+a transgender male orc
+a transgender female orc
+a female gnome
+a male gnome
+a nonbinary gnome
+a transgender male gnome
+a transgender female gnome
+a female fairy
+a male fairy
+a nonbinary fairy
+a transgender male fairy
+a transgender female fairy
+a female nymph
+a male nymph
+a nonbinary nymph
+a transgender male fairy
+a transgender female fairy
+a female shapeshifter
+a male shapeshifter
+a nonbinary shapeshifter
+a transgender male shapeshifter
+a transgender female shapeshifter
+a female spirit
+a male spirit
+a nonbinary spirit
+a transgender male spirit
+a transgender female spirit
+a female vampire
+a male vampire
+a nonbinary vampire
+a transgender male vampire
+a transgender female vampire
+a female reaper
+a male reaper
+a nonbinary reaper
+a transgender male reaper
+a transgender female reaper
+a female dwarf
+a male dwarf
+a nonbinary dwarf
+a transgender male dwarf
+a transgender female dwarf
+a female pixie
+a male pixie
+a nonbinary pixie
+a transgender male pixie
+a transgender female pixie
+a female wizard
+a male wizard
+a nonbinary wizard
+a transgender male wizard
+a transgender female wizard
+a male yōkai
+a female yōkai
+a nonbinary yōkai
+a transgender male yōkai
+a transgender female yōkai
+a male witch
+a female witch
+a nonbinary witch
+a transgender male witch
+a transgender female witch
+a male werewolf
+a female werewolf
+a nonbinary werewolf
+a transgender male werewolf
+a transgender female werewolf

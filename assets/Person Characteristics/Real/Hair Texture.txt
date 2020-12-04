@@ -1,0 +1,10 @@
+straight
+wavy
+frizzy
+messy
+fine
+thick
+neat
+shaggy
+curly
+coily

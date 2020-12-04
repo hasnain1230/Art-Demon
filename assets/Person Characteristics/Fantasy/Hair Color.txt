@@ -1,0 +1,26 @@
+red
+crimson
+mahogany
+blue
+turquoise
+sky blue
+dark blue
+yellow
+blond
+ginger
+green
+light green
+pink
+hot pink
+magenta
+purple
+lavender
+white
+black
+gray
+brown
+dark brown
+light brown
+gold
+silver
+orange

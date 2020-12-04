@@ -1,0 +1,43 @@
+pale
+porcelain
+fair
+olive
+peach
+pink
+ivory
+sandy
+tan
+beige
+medium brown
+dark brown
+caramel
+light brown
+brown
+golden brown
+chocolate brown
+deep brown
+light blue
+blue
+dark blue
+light green
+green
+dark green
+gold
+silver
+white
+black
+light gray
+dark gray
+red
+dark red
+orange
+salmon
+dark purple
+purple
+lavender
+turquoise
+yellow
+glittery
+chartreuse
+magenta
+transparent

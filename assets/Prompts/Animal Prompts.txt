@@ -1,0 +1,100 @@
+Use the “=animal” command and draw that animal!
+Use the “=animal” command twice and draw a fusion of those animals!
+Use the “=animal” command three times and draw a fusion of those animals!
+Use the “=animal” command four times and draw a fusion of those animals!
+Draw a **horse**!
+Draw a **cow**!
+Draw a **zebra**!
+Draw a **llama**!
+Draw a **cat**!
+Draw a **ferret**!
+Draw an **eagle**!
+Draw a **macaw**!
+Draw a **raven**!
+Draw a **blue jay**!
+Draw a **goldfinch**!
+Draw an **emu**!
+Draw a **cassowary**!
+Draw a **giraffe**!
+Draw a **dog**!
+Draw a **husky**!
+Draw a **chihuahua**!
+Draw a **basset hound**!
+Draw a **grey wolf**!
+Draw a **red fox**!
+Draw a **lion**!
+Draw a **cheetah**!
+Draw a **chimpanzee**!
+Draw an **African elephant**!
+Draw a **luna moth**!
+Draw an **orchid mantis**!
+Draw a **swallowtail butterfly**!
+Draw a **housefly**!
+Draw a **bumblebee**!
+Draw a **rabbit**!
+Draw a **mouse**!
+Draw a **rat**!
+Draw an **opossum**!
+Draw a **kangaroo**!
+Draw a **deer**!
+Draw a **lemur**!
+Draw an **aye-aye**!
+Draw a **snow monkey**!
+Draw a **rhinoceros**!
+Draw a **crocodile**!
+Draw a **chameleon**!
+Draw a **tree frog**!
+Draw a **leopard gecko**!
+Draw a **dolphin**!
+Draw a pond full of **koi fish**!
+Draw a **sea slug**!
+Draw **jellyfish** slowly drifting in the open sea!
+Draw a **hermit crab**!
+Draw a **horse** galloping across the plains!
+Draw a **dog** chasing a ball!
+Draw a **cat** about to pounce!
+Draw a **cheetah** in pursuit of a gazelle!
+Draw a **mother animal** protecting her young!
+Draw an **animal that would live on the moon**!
+Draw an **animal that would live on the sun**!
+Draw **an animal you wish existed**!
+Draw **a familiar animal with an added feature to make it unusual**!
+Draw **an animal if it lived in a completely different environment**!
+Draw **your best friend** as an animal!
+Draw **yourself** as an animal!
+Draw a **family member** as an animal!
+Draw **your childhood stuffed animal** if they became real!
+Draw a **seal** sunning itself on a rock!
+Draw a **giraffe** eating tree leaves!
+Draw a **pelican** catching fish in its beak!
+Draw a **mother koala** carrying its baby!
+Draw a **cat** sitting like a loaf!
+Draw **an animal being chased by something**!
+Draw **your favorite animal**!
+Draw an animal **you’re most afraid of**!
+Draw **a dangerous animal** in a way that makes it cute!
+Draw **a cute animal** in a way that makes it look dangerous!
+Draw **a fish if it lived in the air**!
+Draw **a bird if it lived underwater**!
+Draw **an animal camouflaged** with its surroundings!
+Draw a robot version of a **lion**!
+Draw a robot version of an **eagle**!
+Draw a robot version of a **komodo dragon**!
+Draw **an endangered animal**!
+Draw **an extinct animal**!
+Draw how **a wild animal species might look if it was domesticated**!
+Draw **a rabbit if it was a predator**!
+Draw **an animal’s skeleton**!
+Draw **your favorite kind of dinosaur**!
+Draw **how a bird might look if it had fur instead**!
+Draw **how a mammal might look if it had feathers instead of fur**!
+Draw **how a furry mammal would look if it lived underwater** like whales and dolphins!
+Draw **how a whale would look if it lived on land**!
+Create a **new kind of cryptid based on a real-life animal**!
+Draw **a pack of sled dogs** pulling a sled across the snow!
+Draw some **sheep** grazing in a sunny field!
+Draw a group of **unlikely animal friends **adventuring together!
+Draw **a cowboy riding a praying mantis**!
+Draw a **large animal if it was the size of an insect**!
+Draw a **crab rave with bright lights and crazy outfits**!
+Draw a **regular animal if it had magic powers**!

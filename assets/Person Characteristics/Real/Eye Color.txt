@@ -1,0 +1,7 @@
+black
+dark brown
+light brown
+hazel
+green
+blue
+gray

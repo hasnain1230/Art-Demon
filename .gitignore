@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Discarded Features
+Discarded/
+
+# Tests
+tests.py
+
+# IDE, Finder, Random Files
+.DS_Store
+.idea/

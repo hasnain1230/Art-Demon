@@ -1,0 +1,63 @@
+acne
+freckles
+birthmark
+mole
+short stature
+tall stature
+intimidating aura
+inviting aura
+warm aura
+cold aura
+pointed nose
+rounded nose
+crooked nose
+large nose
+button nose
+catlike eyes
+shiny eyes
+small eyes
+large eyes
+piercing stare
+short hair
+long hair
+vitiligo
+prosthetic arm
+prosthetic leg
+crooked teeth
+beautiful smile
+youthful face
+rounded face
+square jaw
+wrinkled skin
+surgical scars
+confident stance
+shy stance
+large ears
+small ears
+thick eyebrows
+thin eyebrows
+strong hands
+dainty hands
+large hands
+small hands
+long eyelashes
+heavy makeup
+long arms
+short arms
+long legs
+short legs
+large feet
+small feet
+angular face
+long face
+round cheeks
+missing fingers
+wise look
+innocent look
+tough look
+friendly look
+broad shoulders
+wide hips
+streaked hair
+dyed hair streaks
+long bangs

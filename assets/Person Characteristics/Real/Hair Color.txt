@@ -1,0 +1,13 @@
+light brown
+medium brown
+dark brown
+chestnut brown
+auburn
+pale blonde
+dirty blonde
+strawberry blonde
+black
+copper
+red
+gray
+white

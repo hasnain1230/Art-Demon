@@ -1,0 +1,27 @@
+red
+dark red
+orange
+salmon
+yellow
+lime green
+green
+forest green
+turquoise
+teal
+blue
+dark blue
+violet
+purple
+lavender
+brown
+hazel
+dark brown
+light brown
+black
+white
+pink
+magenta
+hot pink
+gray
+gold
+silver
