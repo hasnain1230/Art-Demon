@@ -142,3 +142,7 @@ src/Testing.py
 # Refreshed keys after pushing out keys publicly in initial commit. All keys have since been disabled and will no longer work.
 utilities/config.py
 utilities/credentials.json
+
+# Drive API Files
+utilities/token.pickle
+
