@@ -75,7 +75,9 @@ class Drive:
 
             jf.close()
         if len(file_ids) == len(file_names):
-            for ids in range(len(file_ids)):  # Everything above could have been done here to make things a little faster and better on space.
+            # Everything above could have been done here, but it would have been less time efficient.
+            # This might be slightly less memory efficient, but it's better on the time efficiency.
+            for ids in range(len(file_ids)):
                 file_id = file_ids[ids]
                 path = 'assets/Palettes/%s' % file_names[ids]
 
