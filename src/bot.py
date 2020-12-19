@@ -8,9 +8,12 @@ from utilities.file_data_reader import file_open_read
 from discord.ext import commands
 from discord.ext.commands import CommandNotFound, MissingPermissions, ExpectedClosingQuoteError
 
+from utilities.Drive import Drive
 from utilities.person import Person
 
 print('Authenticating Services...')
+drive_object = Drive()
+drive_object.auth()
 
 bot = commands.Bot(command_prefix='=')
 
@@ -199,6 +202,8 @@ async def aesthetic(ctx):
 
 @bot.command()
 async def palette(ctx):  # Not working right now.
+    drive_object.get_files_from_id('1c5T1EHN0aWefDiV7c_zEPICQDXcLgCBX')
+    drive_object.download_files_from_json('assets/Palettes/downloaded.json')
     random_pal_file = random.choice(palettes)
     file = discord.File(random_pal_file, filename="image.png")
     embed = discord.Embed(colour=discord.Colour(color))
