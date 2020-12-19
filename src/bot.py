@@ -109,7 +109,7 @@ async def person(ctx, *args):
 @bot.command()
 async def prompt(ctx, *args):
     if args:
-        if args[0] == 'people':
+        if args[0].lower() == 'people':
             prompts = file_open_read('assets/Prompts/People Prompts.txt')
 
             embed = discord.Embed(title='People Prompt', description=random.choice(prompts),
@@ -117,7 +117,7 @@ async def prompt(ctx, *args):
             embed.set_footer(text='Happy Drawing >:)')
 
             await ctx.channel.send(embed=embed)
-        elif args[0] == 'animal':
+        elif args[0].lower() == 'animal':
             prompts = file_open_read('assets/Prompts/Animal Prompts.txt')
 
             embed = discord.Embed(title='Animal Prompt', description=random.choice(prompts),
@@ -125,16 +125,25 @@ async def prompt(ctx, *args):
             embed.set_footer(text='Happy Drawing >:)')
 
             await ctx.channel.send(embed=embed)
-        elif args[0] == 'OC' or args[0] == 'oc':
+        elif args[0].lower() == 'oc':
             OCs = file_open_read('assets/Prompts/OC.txt')
             response = random.choice(OCs)
             embed = discord.Embed(title='OC Prompt', description=response, colour=discord.Colour(color))
             embed.set_footer(text='Happy Drawing >:)')
 
             await ctx.channel.send(embed=embed)
+
+        elif args[0].lower() == 'nature':
+            nature_prompts = file_open_read('assets/Prompts/Nature Prompts.txt')
+            response = random.choice(nature_prompts)
+            embed = discord.Embed(title='Nature Prompt', description=response, color=discord.Colour(color))
+            embed.set_footer(text='Happy Drawing')
+
+            await ctx.channel.send(embed=embed)
+
     else:
         all_prompts = file_open_read('assets/Prompts/OC.txt') + file_open_read('assets/Prompts/Animal Prompts.txt') + \
-                      file_open_read('assets/Prompts/People Prompts.txt')
+                      file_open_read('assets/Prompts/People Prompts.txt') + file_open_read('assets/Prompts/Nature Prompts.txt')
         response = random.choice(all_prompts)
 
         embed = discord.Embed(title='Art Prompt', description=response, color=color)
