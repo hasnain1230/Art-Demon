@@ -133,7 +133,6 @@ Discarded/
 
 # Tests
 tests.py
-src/Testing.py
 
 # IDE, Finder, Random Files
 .DS_Store
