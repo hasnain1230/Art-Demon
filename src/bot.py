@@ -1,12 +1,12 @@
 import glob
 import sys
-
 import discord
 import random
+
 from utilities import config
 from utilities.file_data_reader import file_open_read
-from discord.ext import commands
-from discord.ext.commands import CommandNotFound, MissingPermissions, ExpectedClosingQuoteError
+from discord.ext import commands, tasks
+from discord.ext.commands import CommandNotFound, MissingPermissions, has_permissions
 
 from utilities.Drive import Drive
 from utilities.person import Person
@@ -25,6 +25,7 @@ palettes = tuple(glob.glob('assets/Palettes/*.png'))
 @bot.event
 async def on_ready():
     print('Logged In {}'.format(bot.user))
+    GDrive_Refresh.start()
     # Would like to learn how to send a message to all channels.
 
 
@@ -160,7 +161,7 @@ async def animal(ctx):
 
     await ctx.channel.send(embed=embed)
 
-
+'''
 @bot.command()
 async def embedded(ctx):  # This is just for testing purposes of embedding. Ignore.
     embed = discord.Embed(
@@ -181,7 +182,7 @@ async def embedded(ctx):  # This is just for testing purposes of embedding. Igno
     embed.add_field(name='Field Name', value='Field Value3', inline=False)
 
     await ctx.channel.send(file=file, embed=embed)
-
+'''
 
 @bot.command()
 async def f(ctx, *, args=None):  # Optional to pass various arguments.
@@ -209,10 +210,14 @@ async def aesthetic(ctx):
     await ctx.channel.send(embed=embed)  # Response
 
 
-@bot.command()
-async def palette(ctx):  # Not working right now.
+@tasks.loop(hours=6)
+async def GDrive_Refresh():
     drive_object.get_files_from_id('1c5T1EHN0aWefDiV7c_zEPICQDXcLgCBX')
     drive_object.download_files_from_json('assets/Palettes/downloaded.json')
+
+
+@bot.command()
+async def palette(ctx):  # Not working right now.
     random_pal_file = random.choice(palettes)
     file = discord.File(random_pal_file, filename="image.png")
     embed = discord.Embed(colour=discord.Colour(color))
