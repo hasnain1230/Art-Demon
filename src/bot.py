@@ -184,6 +184,7 @@ async def embedded(ctx):  # This is just for testing purposes of embedding. Igno
     await ctx.channel.send(file=file, embed=embed)
 '''
 
+
 @bot.command()
 async def f(ctx, *, args=None):  # Optional to pass various arguments.
     hearts = (':heart:', ':orange_heart:', ':yellow_heart:',
