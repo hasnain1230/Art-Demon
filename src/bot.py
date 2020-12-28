@@ -1,32 +1,33 @@
+import asyncio
 import glob
 import sys
+
 import discord
 import random
 
 from utilities import config
 from utilities.file_data_reader import file_open_read
 from discord.ext import commands, tasks
-from discord.ext.commands import CommandNotFound, MissingPermissions, has_permissions
+from discord.ext.commands import CommandNotFound
 
 from utilities.Drive import Drive
 from utilities.person import Person
+
+from datetime import datetime
 
 print('Authenticating Services...')
 drive_object = Drive()
 drive_object.auth()
 
-bot = commands.Bot(command_prefix='=')
+bot = commands.Bot(command_prefix='&')
 
 color = int('f03c3c', 16)
-
-palettes = tuple(glob.glob('assets/Palettes/*.png'))
 
 
 @bot.event
 async def on_ready():
     print('Logged In {}'.format(bot.user))
     GDrive_Refresh.start()
-    # Would like to learn how to send a message to all channels.
 
 
 @bot.event
@@ -144,7 +145,8 @@ async def prompt(ctx, *args):
 
     else:
         all_prompts = file_open_read('assets/Prompts/OC.txt') + file_open_read('assets/Prompts/Animal Prompts.txt') + \
-                      file_open_read('assets/Prompts/People Prompts.txt') + file_open_read('assets/Prompts/Nature Prompts.txt')
+                      file_open_read('assets/Prompts/People Prompts.txt') + file_open_read(
+            'assets/Prompts/Nature Prompts.txt')
         response = random.choice(all_prompts)
 
         embed = discord.Embed(title='Art Prompt', description=response, color=color)
@@ -160,6 +162,7 @@ async def animal(ctx):
     embed = discord.Embed(description=response, colour=discord.Colour(color))
 
     await ctx.channel.send(embed=embed)
+
 
 '''
 @bot.command()
@@ -219,11 +222,27 @@ async def GDrive_Refresh():
 
 @bot.command()
 async def palette(ctx):  # Not working right now.
+    palettes = tuple(glob.glob('assets/Palettes/*.png'))
     random_pal_file = random.choice(palettes)
     file = discord.File(random_pal_file, filename="image.png")
     embed = discord.Embed(colour=discord.Colour(color))
     embed.set_image(url="attachment://image.png")
     await ctx.channel.send(file=file, embed=embed)
+
+
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def timer(ctx, channel: discord.TextChannel, time_to_run):  # I'm not sure if this is the best way to do this. I have to do some research. =/
+    await ctx.channel.send('Set!')
+
+    now = datetime.now()
+    time_to_run = f'{str(now.date())} {time_to_run}'
+    time_to_run = datetime.strptime(time_to_run, '%Y-%m-%d %H:%M')
+    delay = (time_to_run - now).total_seconds()
+    ctx.channel = channel
+
+    await asyncio.sleep(delay)
+    await prompt(ctx)
 
 
 @bot.command(name='exit')
