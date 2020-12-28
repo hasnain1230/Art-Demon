@@ -234,11 +234,14 @@ async def palette(ctx):  # Not working right now.
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def timer(ctx, channel: discord.TextChannel, time_to_run):  # I'm not sure if this is the best way to do this. I have to do some research. =/
+    await ctx.channel.send('Set!')
+
     now = datetime.now()
     time_to_run = f'{str(now.date())} {time_to_run}'
     time_to_run = datetime.strptime(time_to_run, '%Y-%m-%d %H:%M')
     delay = (time_to_run - now).total_seconds()
     ctx.channel = channel
+
     await asyncio.sleep(delay)
     await prompt(ctx)
 
