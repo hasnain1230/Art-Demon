@@ -1,9 +1,6 @@
 import asyncio
 import glob
-import sched
 import sys
-import threading
-import time
 
 import discord
 import random
@@ -11,12 +8,12 @@ import random
 from utilities import config
 from utilities.file_data_reader import file_open_read
 from discord.ext import commands, tasks
-from discord.ext.commands import CommandNotFound, MissingPermissions, has_permissions
+from discord.ext.commands import CommandNotFound
 
 from utilities.Drive import Drive
 from utilities.person import Person
 
-from datetime import datetime, timedelta
+from datetime import datetime
 
 print('Authenticating Services...')
 drive_object = Drive()
