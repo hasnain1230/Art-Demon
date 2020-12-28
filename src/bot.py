@@ -221,7 +221,7 @@ async def GDrive_Refresh():
 
 
 @bot.command()
-async def palette(ctx):  # Not working right now.
+async def palette(ctx):
     palettes = tuple(glob.glob('assets/Palettes/*.png'))
     random_pal_file = random.choice(palettes)
     file = discord.File(random_pal_file, filename="image.png")
