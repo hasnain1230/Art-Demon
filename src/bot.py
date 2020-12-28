@@ -19,11 +19,9 @@ print('Authenticating Services...')
 drive_object = Drive()
 drive_object.auth()
 
-bot = commands.Bot(command_prefix='=')
+bot = commands.Bot(command_prefix='&')
 
 color = int('f03c3c', 16)
-
-palettes = tuple(glob.glob('assets/Palettes/*.png'))
 
 
 @bot.event
@@ -224,6 +222,7 @@ async def GDrive_Refresh():
 
 @bot.command()
 async def palette(ctx):  # Not working right now.
+    palettes = tuple(glob.glob('assets/Palettes/*.png'))
     random_pal_file = random.choice(palettes)
     file = discord.File(random_pal_file, filename="image.png")
     embed = discord.Embed(colour=discord.Colour(color))
