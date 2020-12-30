@@ -228,8 +228,8 @@ async def palette(ctx):
     embed = discord.Embed(colour=discord.Colour(color))
     embed.set_image(url="attachment://image.png")
     await ctx.channel.send(file=file, embed=embed)
-
-
+    
+    
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def timer(ctx, channel: discord.TextChannel, time_to_run):  # I'm not sure if this is the best way to do this. I have to do some research. =/
