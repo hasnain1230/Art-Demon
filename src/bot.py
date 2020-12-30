@@ -245,12 +245,14 @@ async def timer(ctx, channel: discord.TextChannel, time_to_run):  # I'm not sure
     await prompt(ctx)
 
 
-@bot.command(name='exit')
-@commands.has_permissions(administrator=True)
-async def exit(ctx):
-    print(bot.guilds.members)
-    await ctx.channel.send('Going Offline')
-    sys.exit('Going offline.')
+@bot.command(name='bot_logout')
+async def bot_logout(ctx):
+    if ctx.author.id == 693089171002097724:
+        await ctx.channel.send('Going Offline')
+        await bot.logout()
+    else:
+        await ctx.channel.send('You do not have the permission to do that!')
+        # raise MissingPermissions() ?? Need to figure out what to pass in.
 
 
 TOKEN = config.DISCORD_SECRET_TOKEN
