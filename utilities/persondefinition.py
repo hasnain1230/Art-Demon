@@ -1,7 +1,7 @@
 import random
 
 
-class Person:
+class PersonDefinition:
     def __init__(self, hair_texture, hair_color, eye_color, skin_tone, body_type, gender_age, features):
         self.hair_texture = hair_texture
         self.hair_color = hair_color

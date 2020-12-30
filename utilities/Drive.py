@@ -2,7 +2,6 @@ import io
 import pickle
 import os.path
 import json
-import shutil
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -15,7 +14,7 @@ from googleapiclient.http import MediaIoBaseDownload
 # Client authorizes.
 # All file names and file IDs are queued for downloads in file list stored in memory.
 # Those file IDs are stored to already downloaded file, downloaded.json. These files are assumed to have been downloaded
-# Downloaded files are stored. When function is called again, it will search to see if there are any new files, 
+# Downloaded files are stored. When function is called again, it will search to see if there are any new files,
 
 class Drive:
     service = None
@@ -50,7 +49,6 @@ class Drive:
         cls.service = build('drive', 'v3', credentials=creds)
 
     def get_files_from_id(self, folder_id):
-        self.auth()
         page_token = None
         downloaded = open('assets/Palettes/downloaded.json',
                           'w+')  # This is to log the most recent files that have been downloaded.
