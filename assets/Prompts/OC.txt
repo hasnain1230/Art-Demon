@@ -15,12 +15,12 @@ Draw your OC **genderbent**!
 Draw your OC as **a furry (if human) or a human (if furry)**!
 Draw your OC as **their spirit animal**!
 Draw your OC **doing crafts**!
-Use the **“=person realistic” command to make your next OC**!
-Use the **“=person fantasy” command to make your next OC**!
-Use the **“=person” command to make your next OC!**
-Use the **“=animal” command and make an OC based off that animal**!
-Use the **“=aesthetic” command and make an OC based off that aesthetic**!
-Use the **“=palette” command and make an OC based off that color palette**!
+Use the **“&person realistic” command to make your next OC**!
+Use the **“&person fantasy” command to make your next OC**!
+Use the **“&person” command to make your next OC!**
+Use the **“&animal” command and make an OC based off that animal**!
+Use the **“&aesthetic” command and make an OC based off that aesthetic**!
+Use the **“&palette” command and make an OC based off that color palette**!
 Make an OC inspired by the season of **fall**!
 Make an OC inspired by the season of **summer**!
 Make an OC inspired by the season of **spring**!
@@ -65,12 +65,12 @@ Make an OC inspired by **chic** fashion!
 Make an OC inspired by **african** fashion!
 Make an OC inspired by the **steampunk** aesthetic!
 Make an OC inspired by the **minimalist** aesthetic!
-Use the “=person realistic” command to make your next OC!
-Use the “=person fantasy” command to make your next OC!
-Use the “=person” command to make your next OC!”
-Use the “=animal” command and make an OC based off that animal!
-Use the “=aesthetic” command and make an OC based off that aesthetic!
-Use the “=palette” command and make an OC based off that color palette!
+Use the “&person realistic” command to make your next OC!
+Use the “&person fantasy” command to make your next OC!
+Use the “&person” command to make your next OC!”
+Use the “&animal” command and make an OC based off that animal!
+Use the “&aesthetic” command and make an OC based off that aesthetic!
+Use the “&palette” command and make an OC based off that color palette!
 Make an OC inspired by the season of **fall**!
 Make an OC inspired by the season of **summer**!
 Make an OC inspired by the season of **spring**!

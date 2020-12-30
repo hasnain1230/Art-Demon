@@ -1,8 +1,8 @@
-Use the “=aesthetic” command and draw a person based off that aesthetic!
-Use the “=person realistic” command to generate a person to draw!
-Use the “=person fantasy” command to generate a person to draw!
-Use the “=person” command to generate a person to draw!
-Use the “=animal” command and draw that animal as a human!
+Use the “&aesthetic” command and draw a person based off that aesthetic!
+Use the “&person realistic” command to generate a person to draw!
+Use the “&person fantasy” command to generate a person to draw!
+Use the “&person” command to generate a person to draw!
+Use the “&animal” command and draw that animal as a human!
 Draw a **doctor**!
 Draw a **firefighter** in action!
 Draw a **mad scientist** inventing a crazy machine!
