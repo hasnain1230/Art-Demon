@@ -228,14 +228,31 @@ async def palette(ctx):
     embed = discord.Embed(colour=discord.Colour(color))
     embed.set_image(url="attachment://image.png")
     await ctx.channel.send(file=file, embed=embed)
-
-
-@bot.command(name='exit')
+    
+    
+@bot.command()
 @commands.has_permissions(administrator=True)
-async def exit(ctx):
-    print(bot.guilds.members)
-    await ctx.channel.send('Going Offline')
-    sys.exit('Going offline.')
+async def timer(ctx, channel: discord.TextChannel, time_to_run):  # I'm not sure if this is the best way to do this. I have to do some research. =/
+    await ctx.channel.send('Set!')
+
+    now = datetime.now()
+    time_to_run = f'{str(now.date())} {time_to_run}'
+    time_to_run = datetime.strptime(time_to_run, '%Y-%m-%d %H:%M')
+    delay = (time_to_run - now).total_seconds()
+    ctx.channel = channel
+
+    await asyncio.sleep(delay)
+    await prompt(ctx)
+
+
+@bot.command(name='bot_logout')
+async def bot_logout(ctx):
+    if ctx.author.id == 693089171002097724:
+        await ctx.channel.send('Going Offline')
+        await bot.logout()
+    else:
+        await ctx.channel.send('You do not have the permission to do that!')
+        # raise MissingPermissions() ?? Need to figure out what to pass in.
 
 
 TOKEN = config.DISCORD_SECRET_TOKEN
