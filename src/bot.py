@@ -5,6 +5,8 @@ import sys
 import discord
 import random
 
+import pytz
+
 from utilities import config
 from utilities.file_data_reader import file_open_read
 from discord.ext import commands, tasks
@@ -33,6 +35,7 @@ async def on_ready():
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, CommandNotFound):
+        await ctx.channel.send('That command was not found and/or does not exist. Please use &help to get a list of commands!')
         return
     raise error
 
@@ -228,21 +231,27 @@ async def palette(ctx):
     embed = discord.Embed(colour=discord.Colour(color))
     embed.set_image(url="attachment://image.png")
     await ctx.channel.send(file=file, embed=embed)
-    
-    
+
+
 @bot.command()
 @commands.has_permissions(administrator=True)
-async def timer(ctx, channel: discord.TextChannel, time_to_run):  # I'm not sure if this is the best way to do this. I have to do some research. =/
-    await ctx.channel.send('Set!')
+async def dailyprompt(ctx, arbitrary_prefix, channel: discord.TextChannel,
+                      time_to_run):  # I'm not sure if this is the best way to do this. I have to do some research. =/
+    if arbitrary_prefix == 'set':
+        await ctx.channel.send('Set!')
 
-    now = datetime.now()
-    time_to_run = f'{str(now.date())} {time_to_run}'
-    time_to_run = datetime.strptime(time_to_run, '%Y-%m-%d %H:%M')
-    delay = (time_to_run - now).total_seconds()
-    ctx.channel = channel
+        timezone = pytz.timezone('EST')
 
-    await asyncio.sleep(delay)
-    await prompt(ctx)
+        now = datetime.now(timezone)
+        time_to_run = f'{str(now.date())} {time_to_run}'
+        time_to_run = datetime.strptime(time_to_run, '%Y-%m-%d %H:%M')
+        delay = (time_to_run - now).total_seconds()
+        ctx.channel = channel
+
+        await asyncio.sleep(delay)
+        await prompt(ctx)
+    else:
+        raise CommandNotFound
 
 
 @bot.command(name='bot_logout')
