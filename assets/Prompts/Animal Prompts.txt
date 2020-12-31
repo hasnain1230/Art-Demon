@@ -1,7 +1,7 @@
-Use the “=animal” command and draw that animal!
-Use the “=animal” command twice and draw a fusion of those animals!
-Use the “=animal” command three times and draw a fusion of those animals!
-Use the “=animal” command four times and draw a fusion of those animals!
+Use the “&animal” command and draw that animal!
+Use the “&animal” command twice and draw a fusion of those animals!
+Use the “&animal” command three times and draw a fusion of those animals!
+Use the “&animal” command four times and draw a fusion of those animals!
 Draw a **horse**!
 Draw a **cow**!
 Draw a **zebra**!
