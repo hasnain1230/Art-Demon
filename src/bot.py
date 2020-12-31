@@ -2,7 +2,7 @@ from utilities import config
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='&')
-extensions = ('src.cogs.events.events', 'src.cogs.aesthetic.aesthetic', 'src.cogs.animal.animal',
+extensions = ('src.cogs.events.events', 'src.cogs.aesthetic.aesthetic', 'src.cogs.creatures.creatures',
               'src.cogs.f_respects.f', 'src.cogs.palette.palette', 'src.cogs.person.person', 'src.cogs.prompts.prompts')
 
 
