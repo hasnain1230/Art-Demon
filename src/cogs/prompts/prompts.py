@@ -9,6 +9,8 @@ from discord.ext.commands import CommandNotFound
 
 from utilities.file_data_reader import file_open_read
 
+from assets.Prompts import word
+
 
 class Prompts(commands.Cog):
     def __init__(self, bot):
@@ -46,15 +48,21 @@ class Prompts(commands.Cog):
                 nature_prompts = file_open_read('assets/Prompts/Nature Prompts.txt')
                 response = random.choice(nature_prompts)
                 embed = discord.Embed(title='Nature Prompt', description=response, color=discord.Colour(self.color))
-                embed.set_footer(text='Happy Drawing')
+                embed.set_footer(text='Happy Drawing >:)')
 
+                await ctx.channel.send(embed=embed)
+
+            elif args[0].lower() == 'word':  # Uses .py files to read data rather than lists. Intended to be changed in a later iteration.
+                response = word.response
+                embed = discord.Embed(title='Word Prompt', description=response, color=discord.Colour(self.color))
+                embed.set_footer(text='Happy Drawing >:)')
                 await ctx.channel.send(embed=embed)
 
         else:
             all_prompts = file_open_read('assets/Prompts/OC.txt') + file_open_read(
                 'assets/Prompts/Animal Prompts.txt') + \
                           file_open_read('assets/Prompts/People Prompts.txt') + file_open_read(
-                'assets/Prompts/Nature Prompts.txt')
+                'assets/Prompts/Nature Prompts.txt') + word.all_possible_prompts
             response = random.choice(all_prompts)
 
             embed = discord.Embed(title='Art Prompt', description=response, color=self.color)
