@@ -22,7 +22,7 @@ class Creatures(commands.Cog):
         await ctx.channel.send(embed=embed)
 
     @commands.command()
-    async def creature(self, ctx):
+    async def creature(self, ctx, *creature_type: str):
         color = random.choice(CreatureCharacteristics.color)
         covering = random.choice(CreatureCharacteristics.covering)
         eye_color = random.choice(CreatureCharacteristics.eye_color)
