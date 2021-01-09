@@ -18,7 +18,7 @@ class Prompts(commands.Cog):
         self.color = int('f03c3c', 16)
 
     @commands.command()
-    async def keyword(self, ctx):  # Needs to be committed
+    async def keyword(self, ctx):
         words = random.sample(keywords.keywords, 3)
         response = f'Here are your three keywords: **{words[0]}**, **{words[1]}**, **{words[2]}**.'
         embed = discord.Embed(title='Keywords', description=response, colour=discord.Colour(self.color))
