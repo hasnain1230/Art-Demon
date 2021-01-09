@@ -37,7 +37,7 @@ class Events(commands.Cog):
 
     @commands.command()
     async def logout(self, ctx):
-        if ctx.author.id == 693089171002097724:
+        if ctx.author.id == 693089171002097724 or ctx.author.id == 214935867859402752:
             await ctx.channel.send('Going Offline')
             await self.bot.logout()
         else:

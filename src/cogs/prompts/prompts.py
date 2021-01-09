@@ -1,21 +1,28 @@
 import asyncio
 import random
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import discord
 import pytz
-from discord.ext import commands
-from discord.ext.commands import CommandNotFound
+from discord.ext import commands, tasks
 
 from utilities.file_data_reader import file_open_read
 
 from assets.Prompts import word
+from assets.Prompts import keywords
 
 
 class Prompts(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.color = int('f03c3c', 16)
+
+    @commands.command()
+    async def keyword(self, ctx):  # Needs to be committed
+        words = random.sample(keywords.keywords, 3)
+        response = f'Here are your three keywords: **{words[0]}**, **{words[1]}**, **{words[2]}**.'
+        embed = discord.Embed(title='Keywords', description=response, colour=discord.Colour(self.color))
+        await ctx.channel.send(embed=embed)
 
     @commands.command()
     async def prompt(self, ctx, *args):
@@ -69,25 +76,36 @@ class Prompts(commands.Cog):
 
             await ctx.channel.send(embed=embed)
 
-    @commands.command()
+    @commands.command(aliases=['dp'])
     @commands.has_permissions(administrator=True)
     async def dailyprompt(self, ctx, arbitrary_prefix, channel: discord.TextChannel,
                           time_to_run):  # I'm not sure if this is the best way to do this. I have to do some research. =/
         if arbitrary_prefix == 'set':
-            await ctx.channel.send('Daily Prompt has been set! [Though it is not fully functional right now.]')
+            await ctx.channel.send('Daily Prompt has been set! [This feature may be buggy!]')
 
             time_zone = pytz.timezone('EST')
 
             now = datetime.now(time_zone)
             time_to_run = f'{str(now.date())} {time_to_run}'
             time_to_run = datetime.strptime(time_to_run, '%Y-%m-%d %H:%M').astimezone(time_zone)
-            delay = (time_to_run - now).total_seconds()
+            difference = (time_to_run - now).total_seconds()
+
+            if difference < 0:
+                time_to_run += timedelta(hours=24)
+                difference = (time_to_run - now).total_seconds()
+                if difference < 0:
+                    await ctx.channel.send('Please input a valid time.')
+                    raise ValueError
+
             ctx.channel = channel
 
-            await asyncio.sleep(delay)
+            await asyncio.sleep(difference)
             await self.prompt(ctx)
+            await asyncio.sleep(1)
+            await self.dailyprompt(ctx, arbitrary_prefix, channel, time_to_run)
+
         else:
-            raise CommandNotFound
+            await ctx.channel.send('Did you mean `dailyprompt set [channel] [time]`?')
 
 
 def setup(bot):
