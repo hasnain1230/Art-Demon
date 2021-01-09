@@ -146,3 +146,6 @@ utilities/credentials.json
 # Drive API Files
 utilities/token.pickle
 
+# Log files for daily prompt to remember daily prompt timer's during server updates
+src/cogs/prompts/dailyprompt.log
+

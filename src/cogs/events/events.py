@@ -1,5 +1,5 @@
 from discord.ext import commands, tasks
-from discord.ext.commands import CommandNotFound
+from discord.ext.commands import CommandNotFound, MissingPermissions
 
 from utilities.Drive import Drive
 
@@ -23,6 +23,8 @@ class Events(commands.Cog):
             await ctx.channel.send(
                 'That command was not found and/or does not exist. Please use &help to get a list of commands!')
             return
+        if isinstance(error, MissingPermissions):
+            await ctx.channel.send('Hey! >:( you have don\'t have permission to do that!')
         raise error
 
     @commands.Cog.listener()
