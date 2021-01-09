@@ -5,11 +5,11 @@ bot = commands.Bot(command_prefix='&')
 extensions = ('src.cogs.events.events', 'src.cogs.aesthetic.aesthetic', 'src.cogs.creatures.creatures',
               'src.cogs.f_respects.f', 'src.cogs.palette.palette', 'src.cogs.person.person', 'src.cogs.prompts.prompts')
 
-
 if __name__ == '__main__':
     print('Loading commands...')
     for ext in extensions:
         bot.load_extension(ext)
+
 
 TOKEN = config.DISCORD_SECRET_TOKEN
 bot.run(TOKEN)

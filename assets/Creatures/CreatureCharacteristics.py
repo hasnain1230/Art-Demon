@@ -48,14 +48,14 @@ class CreatureFantasy:
                 'shiny skin', 'hard skin', 'soft skin', 'skin', 'wrinkly skin', 'jagged scales', 'scales', 'hard scales',
                 'soft scales', 'smooth scales', 'rough scales', 'shiny scales')
     eye_color = ('black eyes', 'dark brown eyes', 'light brown eyes', 'hazel eyes', 'green eyes', 'yellow eyes',
-                  'orange eyes', 'blue eyes', 'red eyes', 'gray eyes', 'purple eyes', 'pink eyes', 'magenta eyes',
-                  'turquoise eyes', 'white eyes', 'no eyes', 'one eye', 'one black eye', 'one yellow eye',
-                  'one brown eye', 'one blue eye', 'one green eye', 'three purple eyes', 'three black eyes',
-                  'three green eyes', 'three yellow eyes', 'three pink eyes', 'four eyes', 'four brown eyes',
-                  'four green eyes', 'four yellow eyes', 'four purple eyes', 'four black eyes', 'five eyes', 'six eyes',
-                  'seven eyes', 'eight eyes', 'golden eyes', 'silver eyes', 'rainbow eyes', 'hundreds of eyes',
-                  'eyes all over its body', 'different colored eyes')
-    size = ('microscopic', 'tiny', 'small', 'cat-sized', 'wolf-sized', 'elephant-sized', 'whale-sized', 'medium',
+                 'orange eyes', 'blue eyes', 'red eyes', 'gray eyes', 'purple eyes', 'pink eyes', 'magenta eyes',
+                 'turquoise eyes', 'white eyes', 'no eyes', 'one eye', 'one black eye', 'one yellow eye',
+                 'one brown eye', 'one blue eye', 'one green eye', 'three purple eyes', 'three black eyes',
+                 'three green eyes', 'three yellow eyes', 'three pink eyes', 'four eyes', 'four brown eyes',
+                 'four green eyes', 'four yellow eyes', 'four purple eyes', 'four black eyes', 'five eyes', 'six eyes',
+                 'seven eyes', 'eight eyes', 'golden eyes', 'silver eyes', 'rainbow eyes', 'hundreds of eyes',
+                 'eyes all over its body', 'different colored eyes')
+    size = ('microscopic', 'tiny', 'small', 'cat-sized', 'wolf-sized', 'elephant-sized', 'whale-sized', 'medium-sized',
             'large', 'huge', 'skyscraper-sized', 'planet-sized')
     body_type = ('fragile', 'lanky', 'slender', 'chubby', 'stocky', 'light', 'heavy', 'muscular', 'lithe', 'broad',
                  'pudgy', 'compact', 'square', 'hulking', 'thick', 'strong', 'thin', 'wolf-like', 'cat-like', 'bird-like',
