@@ -21,7 +21,7 @@ words = ('tired', 'lazy', 'fast', 'slow', 'happy', 'sad', 'angry', 'big', 'small
 
 response = f'Draw something based off this word: **{random.choice(words)}.**'
 
-all_possible_prompts = []
+all_possible_prompts = []  # This stuff is for the case where you need every possible prompt if the user does not specify which type of prompt they want.
 
 for word in words:
     all_possible_prompts.append(f'Draw something based off this word: **{word}.**')
