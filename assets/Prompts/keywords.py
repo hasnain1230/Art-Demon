@@ -18,3 +18,5 @@ keywords = ('red', 'black', 'blue', 'magenta', 'lime', 'gold', 'ruby', 'warm', '
             'pushy', 'wooden', 'drum', 'leg', 'key', 'amusement', 'scissors', 'heart', 'chair', 'fish', 'wave', 'expert',
             'rock', 'ring', 'note', 'sheet', 'story', 'earthquake', 'behavior', 'cloud', 'turkey', 'bear', 'circle',
             'fear', 'voyage', 'fang', 'smell', 'deal', 'download', 'humiliate', 'reflect', 'island', 'forest', 'desert')
+
+response = f'Here is your random keyword!'
