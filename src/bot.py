@@ -3,7 +3,8 @@ from discord.ext import commands
 
 bot = commands.Bot(command_prefix='&')
 extensions = ('src.cogs.events.events', 'src.cogs.aesthetic.aesthetic', 'src.cogs.creatures.creatures',
-              'src.cogs.f_respects.f', 'src.cogs.palette.palette', 'src.cogs.person.person', 'src.cogs.prompts.prompts')
+              'src.cogs.f_respects.f', 'src.cogs.palette.palette', 'src.cogs.person.person', 'src.cogs.prompts.prompts',
+              'src.cogs.plant_gen.plant', 'src.cogs.emoji_gen.emoji_generator', 'src.cogs.color_generator.color_generator')
 
 if __name__ == '__main__':
     print('Loading commands...')

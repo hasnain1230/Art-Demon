@@ -1,8 +1,6 @@
 import asyncio
 import csv
-import logging
 import random
-import traceback
 from datetime import datetime, timedelta
 
 import discord
@@ -52,7 +50,6 @@ class Prompts(commands.Cog):
         with open('src/cogs/prompts/Daily_Prompt.log', 'r') as csvfile:
             reader = csv.reader(csvfile)
             for row in reader:
-                print(row)
                 if int(row[0]) == guild_id:
                     if row[4] == 'Active':
                         return True
