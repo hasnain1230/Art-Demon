@@ -6,13 +6,15 @@ import signal
 
 from utilities import config
 from discord.ext import commands
+from src.cogs.HELP import HELP
 
 intents = discord.Intents.all()  # Should probably fix this at some point
-bot = commands.Bot(command_prefix='&', intents=intents)
+
+bot = commands.Bot(command_prefix='&', intents=intents, help_command=None)
 extensions = ('src.cogs.events.events', 'src.cogs.aesthetic.aesthetic', 'src.cogs.creatures.creatures',
               'src.cogs.f_respects.f', 'src.cogs.palette.palette', 'src.cogs.person.person', 'src.cogs.prompts.prompts',
               'src.cogs.plant_gen.plant', 'src.cogs.emoji_gen.emoji_generator',
-              'src.cogs.color_generator.color_generator')
+              'src.cogs.color_generator.color_generator', 'src.cogs.HELP')
 
 
 async def handler():

@@ -213,7 +213,6 @@ class Prompts(commands.Cog):
 
             datetime_to_run = f'{str(now.date())} {time_to_run}'
             datetime_to_run = datetime.strptime(datetime_to_run, '%Y-%m-%d %H:%M').astimezone(time_zone)
-            print(datetime_to_run)
             difference = (datetime_to_run - now).total_seconds()
 
             if difference < 0:
