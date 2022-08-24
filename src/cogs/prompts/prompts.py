@@ -13,6 +13,13 @@ from assets.Prompts import word
 from assets.Prompts import keywords
 
 
+def format_time_correctly(time_to_run):
+    if len(time_to_run) == 5 and time_to_run[0:2].isnumeric() and time_to_run[2] == ':' and time_to_run[3:5].isnumeric():
+        return True
+
+    return False
+
+
 class Prompts(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -181,8 +188,12 @@ class Prompts(commands.Cog):
 
     @commands.command(aliases=['dp'])
     @commands.has_permissions(administrator=True)
-    async def dailyprompt(self, ctx, arbitrary_prefix='', channel: discord.TextChannel = None, time_to_run: str = None,
+    async def dailyprompt(self, ctx, arbitrary_prefix='', channel: discord.TextChannel = None, time_to_run: str = None, *, args=None,
                           prompt=True, restart=False, repeat=False, guild_id=None):  # This command seriously needs a database to run more efficiently. For now though, I just want it working.
+        if not format_time_correctly(time_to_run) or args:
+            await ctx.channel.send('Time Format Error: Did you mean `dailyprompt set [#channel] [time HH:MM]`?')
+            return
+
         if arbitrary_prefix.lower() == 'set' and channel is not None and time_to_run is not None:
             if not restart and not repeat:
                 guild_id = ctx.message.guild.id
@@ -202,6 +213,7 @@ class Prompts(commands.Cog):
 
             datetime_to_run = f'{str(now.date())} {time_to_run}'
             datetime_to_run = datetime.strptime(datetime_to_run, '%Y-%m-%d %H:%M').astimezone(time_zone)
+            print(datetime_to_run)
             difference = (datetime_to_run - now).total_seconds()
 
             if difference < 0:
