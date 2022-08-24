@@ -1,9 +1,16 @@
 # Art Demon Commands
 > Bot Prefix: `&`
--  `&aesthetic`
+> 
+> <br> 
+> How To Read: <br>
+> - Command arguments surrounded in `<>` are optional arguments that can be given. <br>
+> - Command arguments surrounded [] mean that anything can be passed to the command.
+> - Command arguments surrounded in {} mean that the command in question can also be invoked using descriptor given in {}
+ 
+- `&aesthetic`
 	- Gives a random aesthetic / theme to use.
 - `&color`
-	- Gives a random color along with it's hex code.
+	- Gives a random color along with its hex code.
 - `&colors`
 	- Gives a random number of colors between 2 and 6 along with their hex codes.
 - `&colors <number>`
