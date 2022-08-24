@@ -85,5 +85,5 @@ class ColorGenerator(commands.Cog):
         os.remove('src/cogs/color_generator/colors.png')
 
 
-def setup(bot):
-    bot.add_cog(ColorGenerator(bot))
+async def setup(bot):
+    await bot.add_cog(ColorGenerator(bot))

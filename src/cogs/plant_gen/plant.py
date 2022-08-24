@@ -36,5 +36,5 @@ class Plant(commands.Cog):
             await self.plant(ctx, random.choice(['fantasy', 'realistic']))
 
 
-def setup(bot):
-    bot.add_cog(Plant(bot))
+async def setup(bot):
+    await bot.add_cog(Plant(bot))

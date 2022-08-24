@@ -22,5 +22,5 @@ class Aesthetic(commands.Cog):
         await ctx.channel.send(embed=embed)  # Response
 
 
-def setup(bot):
-    bot.add_cog(Aesthetic(bot))
+async def setup(bot):
+    await bot.add_cog(Aesthetic(bot))

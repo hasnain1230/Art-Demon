@@ -28,10 +28,9 @@ class Events(commands.Cog):
         # channel = self.bot.get_channel(796201038881095694)
         t = threading.Thread(target=asyncio.run, args=(self.start_dailyprompts(),))
         print("Starting new thread for daily prompts")
-        await self.start_dailyprompts()
         t.start()
         print('Done and Ready!')
-        t.join()
+        await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Indigo Draw"))
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
@@ -57,7 +56,7 @@ class Events(commands.Cog):
     async def logout(self, ctx):
         if ctx.author.id == 693089171002097724 or ctx.author.id == 214935867859402752:
             await ctx.channel.send('Going Offline')
-            await self.bot.logout()
+            await self.bot.close()
         else:
             await ctx.channel.send('You do not have the permission to do that!')
             raise MissingPermissions(MissingPermissions)
@@ -68,5 +67,5 @@ class Events(commands.Cog):
         self.drive_object.download_files_from_json('assets/Palettes/downloaded.json')
 
 
-def setup(bot):
-    bot.add_cog(Events(bot))
+async def setup(bot):
+    await bot.add_cog(Events(bot))
