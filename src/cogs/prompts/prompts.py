@@ -22,6 +22,7 @@ class Prompts(commands.Cog):
     async def sleep_cancel_safe(self, delay, guild_id, result=None):
         coro = asyncio.sleep(delay, result=result)
         task = asyncio.ensure_future(coro)
+
         self.bot.active_tasks[guild_id] = task
 
         try:
@@ -210,6 +211,7 @@ class Prompts(commands.Cog):
                     await ctx.send('Please input a valid time.')
                     raise ValueError
             # i want daily prompt header to say “Daily Prompt (day of week) (date) (year)
+
             if prompt:
                 response = f'You have a set a daily prompt for **{datetime_to_run.time()} EST**. It is set to begin at ' \
                            f'**{datetime_to_run.strftime("%A, %B %d, %Y")} at {datetime_to_run.time()}**. ' \
@@ -220,7 +222,7 @@ class Prompts(commands.Cog):
                 embed = discord.Embed(title=title, description=response, color=self.color)
                 await ctx.send(embed=embed)
 
-            if not restart:
+            if not restart and not repeat:
                 self.log_daily_prompt(ctx, channel, ctx.author.id, time_to_run)
 
             await self.sleep_cancel_safe(difference, guild_id, result=None)
@@ -229,11 +231,14 @@ class Prompts(commands.Cog):
 
             if self.check_active(guild_id):
                 if restart:
-                    await self.prompt(self, ctx=ctx, dp=True)
+                    await self.prompt(self, ctx, dp=True)
+                    await self.dailyprompt(self, ctx, 'set', channel=channel, time_to_run=time_to_run, prompt=False,
+                                           restart=restart, repeat=True, guild_id=guild_id)
                 else:
-                    await self.prompt(ctx=ctx, dp=True)
+                    await self.prompt(ctx, dp=True)
+                    await self.dailyprompt(ctx, 'set', channel=channel, time_to_run=time_to_run, prompt=False,
+                                           restart=restart, repeat=True, guild_id=guild_id)
 
-                await self.dailyprompt(ctx, arbitrary_prefix, channel=channel, time_to_run=time_to_run, prompt=False, restart=False, repeat=True, guild_id=guild_id)
         elif arbitrary_prefix.lower() == 'cancel':
             try:
                 task = self.bot.active_tasks[int(ctx.message.guild.id)]
@@ -254,5 +259,5 @@ class Prompts(commands.Cog):
             await ctx.channel.send('Did you mean `dailyprompt set [#channel] [time HH:MM]`?')
 
 
-def setup(bot):
-    bot.add_cog(Prompts(bot))
+async def setup(bot):
+    await bot.add_cog(Prompts(bot))

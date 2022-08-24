@@ -2,6 +2,7 @@ import io
 import pickle
 import os.path
 import json
+import sys
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -9,6 +10,8 @@ from google.auth.transport.requests import Request
 
 # If modifying these scopes, delete the file token.pickle.
 from googleapiclient.http import MediaIoBaseDownload
+
+import os
 
 
 # Client authorizes.

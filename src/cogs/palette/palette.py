@@ -20,5 +20,5 @@ class Palette(commands.Cog):
         await ctx.channel.send(file=file, embed=embed)
 
 
-def setup(bot):
-    bot.add_cog(Palette(bot))
+async def setup(bot):
+    await bot.add_cog(Palette(bot))

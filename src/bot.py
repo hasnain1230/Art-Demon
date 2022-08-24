@@ -1,18 +1,44 @@
+import asyncio
+import sys
+
+import discord
+import signal
+
 from utilities import config
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='&')
+intents = discord.Intents.all()  # Should probably fix this at some point
+bot = commands.Bot(command_prefix='&', intents=intents)
 extensions = ('src.cogs.events.events', 'src.cogs.aesthetic.aesthetic', 'src.cogs.creatures.creatures',
               'src.cogs.f_respects.f', 'src.cogs.palette.palette', 'src.cogs.person.person', 'src.cogs.prompts.prompts',
-              'src.cogs.plant_gen.plant', 'src.cogs.emoji_gen.emoji_generator', 'src.cogs.color_generator.color_generator')
+              'src.cogs.plant_gen.plant', 'src.cogs.emoji_gen.emoji_generator',
+              'src.cogs.color_generator.color_generator')
 
-if __name__ == '__main__':
+
+async def handler():
+    await bot.close()
+    sys.exit()
+
+
+async def load_extensions():
     print('Loading commands...')
     for ext in extensions:
-        bot.load_extension(ext)
+        await bot.load_extension(ext)
 
-TOKEN = config.DISCORD_SECRET_TOKEN
-bot.run(TOKEN)
+
+async def main():
+    async with bot:
+        await load_extensions()
+        TOKEN = config.DISCORD_SECRET_TOKEN
+
+        for signal_name in ('SIGINT', 'SIGTERM'):
+            bot.loop.add_signal_handler(getattr(signal, signal_name), lambda: asyncio.ensure_future(handler()))
+
+        await bot.start(TOKEN)
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
 
 '''
 @bot.command()

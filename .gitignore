@@ -132,7 +132,7 @@ dmypy.json
 Discarded/
 
 # Tests
-tests.py
+scripts/refresh_emojis.py
 src/Testing.py
 
 # IDE, Finder, Random Files
