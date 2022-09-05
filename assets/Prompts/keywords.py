@@ -1,3 +1,5 @@
+import random
+
 keywords = ('red', 'black', 'blue', 'magenta', 'lime', 'gold', 'ruby', 'warm', 'emerald', 'clean', 'noxious', 'mute',
             'absent', 'agonizing', 'frail', 'disgusted', 'innocent', 'puzzled', 'flowery', 'shiny', 'concerned', 'billowy',
             'wonderful', 'empty', 'tacky', 'ancient', 'physical', 'resolute', 'depressed', 'elfin', 'rural', 'urban',
@@ -19,4 +21,4 @@ keywords = ('red', 'black', 'blue', 'magenta', 'lime', 'gold', 'ruby', 'warm', '
             'rock', 'ring', 'note', 'sheet', 'story', 'earthquake', 'behavior', 'cloud', 'turkey', 'bear', 'circle',
             'fear', 'voyage', 'fang', 'smell', 'deal', 'download', 'humiliate', 'reflect', 'island', 'forest', 'desert')
 
-response = f'Here is your random keyword!'
+response = (f'Draw something based off this random keyword: **{random.choice(keywords)}**', )

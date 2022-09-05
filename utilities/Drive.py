@@ -2,7 +2,6 @@ import io
 import pickle
 import os.path
 import json
-import sys
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow

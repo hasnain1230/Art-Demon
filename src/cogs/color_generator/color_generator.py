@@ -3,7 +3,6 @@ import os
 from PIL import Image
 import random
 import discord
-from discord.abc import Messageable
 from discord.ext import commands
 
 

@@ -31,6 +31,7 @@ class Events(commands.Cog):
         t.start()
         print('Done and Ready!')
         await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Indigo Draw"))
+        t.join()
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):

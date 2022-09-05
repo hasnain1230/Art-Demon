@@ -174,7 +174,8 @@ class Prompts(commands.Cog):
             all_prompts = file_open_read('assets/Prompts/OC.txt') + file_open_read(
                 'assets/Prompts/Animal Prompts.txt') + \
                           file_open_read('assets/Prompts/People Prompts.txt') + file_open_read(
-                'assets/Prompts/Nature Prompts.txt') + word.all_possible_prompts + keywords.keywords
+                'assets/Prompts/Nature Prompts.txt') + word.response + keywords.response
+
             response = random.choice(all_prompts)
 
             if dp:

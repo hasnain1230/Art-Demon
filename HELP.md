@@ -1,4 +1,7 @@
 # Art Demon Commands
+
+Add Art Demon To Your Server [Here!](https://discord.com/api/oauth2/authorize?client_id=740666177554219067&permissions=8&scope=bot)
+
 > Bot Prefix: `&`
 > 
 > <br> 

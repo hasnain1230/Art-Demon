@@ -1,6 +1,11 @@
 # Art-Demon
 Welcome to Art Demon! This Discord bot was made for art related Discord severs. The purpose of this bot is to provide an automated system of art prompts for your users to interact with. There are also a variety of features that are implemented like daily prompts where you can set a daily art prompt to be sent to certain (or all groups) in your Discord sever every day at a certain time. This way, you can spend less time managing your server, and more time drawing and interacting with your server members and less time trying to come up with various art prompts!
 
+<br>
+
+Add Art Demon To Your Server [Here!](https://discord.com/api/oauth2/authorize?client_id=740666177554219067&permissions=8&scope=bot)
+
+
 ## Documentation
 Because I have been really busy with school and projects and projects related to my school work, development on this project has been incredibly slow. That's not to say it's been abandoned and this project will be completed, but the completed date TBD and will be announced once I get some free time. I am aiming to have it done by the end of May!
 

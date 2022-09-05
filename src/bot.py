@@ -6,7 +6,6 @@ import signal
 
 from utilities import config
 from discord.ext import commands
-from src.cogs.HELP import HELP
 
 intents = discord.Intents.all()  # Should probably fix this at some point
 
@@ -50,9 +49,8 @@ async def embedded(ctx):  # This is just for testing purposes of embedding. Igno
         description='Test Description',
         colour=discord.Colour(color)
     )
-
+    
     file = discord.File('galaxy.jpg', filename='image.jpg')
-
     embed.set_footer(text='This is a footer')
     embed.set_image(url='attachment://image.jpg')
     embed.set_footer(text='This is a footer')
