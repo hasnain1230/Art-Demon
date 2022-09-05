@@ -148,3 +148,6 @@ utilities/token.pickle
 
 # Hidden Files
 .*
+
+# Logs
+logs/
