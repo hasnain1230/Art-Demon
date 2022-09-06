@@ -7,9 +7,9 @@ Add Art Demon To Your Server [Here!](https://discord.com/api/oauth2/authorize?cl
 
 
 ## Documentation
-Because I have been really busy with school and projects and projects related to my school work, development on this project has been incredibly slow. That's not to say it's been abandoned and this project will be completed, but the completed date TBD and will be announced once I get some free time. I am aiming to have it done by the end of May!
+~~Because I have been really busy with school and projects and projects related to my school work, development on this project has been incredibly slow. That's not to say it's been abandoned and this project will be completed, but the completed date TBD and will be announced once I get some free time. I am aiming to have it done by the end of May!
 
-That's to way, this will be completed with a HELP command that will lead to a list of all commands and a description of what they do. Also, developer documentation will also be created so that any one else can contribute and add their own features. 
+That's to way, this will be completed with a HELP command that will lead to a list of all commands and a description of what they do. Also, developer documentation will also be created so that any one else can contribute and add their own features.~~
 
 # Credits
 Art-Demon loves and uses various different APIs and assets. I want to make sure that the right people are credited! If I did not credit your API, asset, or anything else that you feel belongs to you, please reach out to me or make a pull request adding your changes. You can reach out to me on Discord: `Lucidity#4586` and I'll be sure to credit you.
