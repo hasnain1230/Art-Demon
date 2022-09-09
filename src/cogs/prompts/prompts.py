@@ -124,7 +124,7 @@ class Prompts(commands.Cog):
                                            restart=True, guild_id=int(row[0]))
 
     @commands.command()
-    async def prompt(self, ctx, *args, dp=False):
+    async def prompt(self, ctx, *args, dp=False): # When this function was written, sub commands were not a thing yet, so messy code like this had to be written. It will be updated in a later iteration
         if args:
             if args[0].lower() == 'people':
                 prompts = file_open_read('assets/Prompts/People Prompts.txt')
@@ -159,7 +159,7 @@ class Prompts(commands.Cog):
                 await ctx.send(embed=embed)
 
             elif args[0].lower() == 'word':  # Uses .py files to read data rather than lists. Intended to be changed in a later iteration.
-                response = word.response
+                response = word.response[0]
                 embed = discord.Embed(title='Word Prompt', description=response, color=discord.Colour(self.color))
                 embed.set_footer(text='Happy Drawing >:)')
                 await ctx.send(embed=embed)
@@ -169,6 +169,9 @@ class Prompts(commands.Cog):
                 response = f'Here are your three keywords: **{words[0]}**, **{words[1]}**, **{words[2]}**.'
                 embed = discord.Embed(title='Keywords Prompt', description=response, colour=discord.Colour(self.color))
                 await ctx.send(embed=embed)
+
+            else:
+                raise discord.ext.commands.CommandNotFound
 
         else:  # Fixing needs to be done here.
             all_prompts = file_open_read('assets/Prompts/OC.txt') + file_open_read(
