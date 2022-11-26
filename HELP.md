@@ -44,6 +44,8 @@ Add Art Demon To Your Server [Here!](https://discord.com/api/oauth2/authorize?cl
 	- Gives a random art prompt to draw,
 - `&prompt <people / animal / OC / nature / word / keywords>`
 	- Based on the prompt selection, a prompt relating to the selection will be given.
+- `&hex <color code>` or `&hex #<color code>`
+	- Returns the specified hex color provided.
 
 # Admin Commands
 
