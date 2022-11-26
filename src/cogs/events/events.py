@@ -5,6 +5,7 @@ import discord.ext.commands.errors
 from discord.ext import commands, tasks
 
 from src.cogs.prompts.prompts import Prompts
+from src.cogs.color_generator.color_generator import ColorGenerator
 from discord.ext.commands import CommandNotFound, MissingPermissions
 
 from utilities.Drive import Drive
@@ -60,7 +61,7 @@ class Events(commands.Cog):
             await self.bot.close()
         else:
             await ctx.channel.send('You do not have the permission to do that!')
-            raise MissingPermissions(MissingPermissions)
+            raise discord.ext.commands.errors.MissingPermissions
 
     @tasks.loop(hours=6)
     async def GDrive_Refresh(self):

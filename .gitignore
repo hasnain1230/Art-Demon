@@ -151,3 +151,6 @@ utilities/token.pickle
 
 # Logs
 logs/
+
+# Run Bot File
+run_bot
